@@ -9,7 +9,7 @@ define([
   "polyfills/function_bind",
   "polyfills/array_index_of",
   "lib/page/swipe",
-  "lib/core/nav_search",
+  //"lib/core/nav_search",
   "lib/page/scroll_perf",
   "lib/core/authenticator",
   "lib/core/shopping_cart",

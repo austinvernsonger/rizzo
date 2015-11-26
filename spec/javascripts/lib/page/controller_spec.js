@@ -81,9 +81,14 @@ define([
         spyOn(controller, "getParams").and.returnValue(serialized.urlParams);
       });
 
-      it("updates the application state object with the search parameters", function() {
-        controller._generateState();
+      it("updates the application state object with provided parameters", function() {
+        controller._generateState("url", controller.getParams());
         expect(controller.states[controller.states.length - 1].state).toEqual(deserialized);
+      });
+
+      it("updates the application state object empty object if paramseters are not provided", function() {
+        controller._generateState("url", null);
+        expect(controller.states[controller.states.length - 1].state).toEqual({});
       });
     });
 

@@ -86,7 +86,7 @@ define([
         expect(controller.states[controller.states.length - 1].state).toEqual(deserialized);
       });
 
-      it("updates the application state object empty object if paramseters are not provided", function() {
+      it("updates the application state object empty object if parameters are not provided", function() {
         controller._generateState("url", null);
         expect(controller.states[controller.states.length - 1].state).toEqual({});
       });

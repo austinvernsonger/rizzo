@@ -28,7 +28,7 @@ define([
 
   Controller.prototype.init  = function() {
     this.pushState = new PushState;
-    this._generateState(this.getDocumentRoot(), this.getParams());
+    this._generateState(this.getSlug(), this.getParams());
   };
 
   // Subscribe
